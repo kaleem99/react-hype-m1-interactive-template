@@ -7,7 +7,7 @@ export default function LandingScene() {
   return (
     <div className="LandingPage">
       <div className="LandingScenes">
-        <div>
+        <div id="A">
           <h1 tabIndex={0} className="Heading1">
             This is the length<br></br> of a heading
           </h1>
@@ -27,7 +27,7 @@ export default function LandingScene() {
             event={() => dispatch({ type: "START_INTERACTIVE" })}
           />
         </div>
-        <div>
+        <div id="B">
           <img tabIndex={0} className="HomeImage" src={Image1} />
         </div>
       </div>
