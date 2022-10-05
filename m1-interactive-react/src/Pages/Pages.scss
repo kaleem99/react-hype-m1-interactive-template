@@ -1,0 +1,87 @@
+.LandingPage {
+  width: 1200px;
+  height: 620px;
+  margin: 0% auto;
+  .LandingScenes {
+    width: 1020px;
+    height: 500px;
+    margin-top: 80px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 510px 510px;
+    div {
+      width: 100%;
+      height: 500px;
+
+      .HomeImage {
+        margin-right: auto;
+        margin-left: 10px;
+      }
+    }
+    div:nth-child(1) {
+      padding: 30px;
+      .Heading1 {
+        font-size: 48px;
+        width: 400px;
+      }
+      .Heading2 {
+        font-size: 36px;
+        font-weight: 400;
+        width: 400px;
+      }
+    }
+  }
+}
+
+// HomePage
+.HomePage {
+  width: 1200px;
+  height: 620px;
+  .Navigation {
+    width: 1200px;
+    height: 60px;
+    display: grid;
+    // border: 1px solid;
+    grid-template-columns: auto auto auto auto;
+
+    .NavButton {
+      width: auto;
+      height: 60px;
+      border: 1px solid rgb(179, 179, 179);
+      font-size: large;
+    }
+  }
+  .ScenePopout {
+    width: 1200px;
+    height: 560px;
+    // background-color: red;
+  }
+  .PopupBackground {
+    width: 1200px;
+    position: absolute;
+    height: 700px;
+    top: 0%;
+    background-color: gray;
+    opacity: 0.5;
+  }
+  .popup {
+    width: 600px;
+    height: 280px;
+    background-color: white;
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    border-radius: 10px;
+    .centeredTextButton {
+      width: 80%;
+      height: 100px;
+      // background-color: gray;
+      margin: 15% auto;
+      text-align: center;
+    }
+  }
+}

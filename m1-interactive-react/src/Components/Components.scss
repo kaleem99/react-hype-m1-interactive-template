@@ -1,0 +1,32 @@
+@import "../styles//styles.scss";
+.btn1 {
+  width: 180px;
+  height: 50px;
+  background-color: #1475d4;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  font-size: large;
+  cursor: pointer;
+}
+.btn1:hover {
+  background-color: #3395e5;
+}
+
+.BreadCrumbs {
+  width: 320px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  .btnBC {
+    text-align: left;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 2px;
+    background-color: white;
+  }
+  .BC {
+    color: #1475d4;
+    font-weight: bold;
+  }
+}
