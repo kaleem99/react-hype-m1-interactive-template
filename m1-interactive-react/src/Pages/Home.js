@@ -6,16 +6,21 @@ import "./Pages.scss";
 const Navigation = ["Option 1", "Option 2", "Option 3", "Option 4"];
 function Home({ popup, section, TabIndex }) {
   const dispatch = useDispatch();
+  const clickEvent = (i) => {
+    dispatch({ type: "Description" });
+    dispatch({ type: Navigation[i] });
+  };
   return (
-    <div className="HomePage">
-      <div className="Navigation">
+    <div className="HomePage" key={0}>
+      <div className="Navigation" key={1}>
         {Navigation.map((nav, i) => (
           <button
+            key={i}
             tabIndex={TabIndex}
-            onClick={() => dispatch({ type: Navigation[i] })}
+            onClick={() => clickEvent(i)}
             className="NavButton"
             style={
-              section === nav
+              section.option === nav
                 ? { backgroundColor: "#1475d4", color: "white" }
                 : { backgroundColor: "" }
             }
@@ -24,18 +29,21 @@ function Home({ popup, section, TabIndex }) {
           </button>
         ))}
       </div>
-      <div className="ScenePopout">
+      <div className="ScenePopout" key={3}>
         <ScenePopout />
       </div>
       {popup && (
         <>
           {" "}
-          <div className="PopupBackground"></div>
-          <div className="popup">
-            <div className="centeredTextButton">
-              <p tabIndex={0}>Click on one of the four topics to learn more.</p>
+          <div className="PopupBackground" key={4}></div>
+          <div className="popup" key={5}>
+            <div className="centeredTextButton" key={6}>
+              <p key={7} tabIndex={0}>
+                Click on one of the four topics to learn more.
+              </p>
               <br></br>
               <Button
+                key={8}
                 text="Okay"
                 event={() => dispatch({ type: "CLOSE_POPUP" })}
                 classNameText="btn1"

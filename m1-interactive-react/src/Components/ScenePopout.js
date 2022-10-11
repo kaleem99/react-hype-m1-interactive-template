@@ -6,7 +6,7 @@ import Message from "../Pages/Scenes/Message/Message";
 
 function ScenePopout({ section }) {
   let body = "";
-  switch (section) {
+  switch (section.option) {
     case "Option 1":
       body = <Form />;
       break;

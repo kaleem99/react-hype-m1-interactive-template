@@ -2,6 +2,8 @@ import { connect } from "react-redux";
 import BreadCrumbsMenu from "../../../Components/BreadCrumbsMenu";
 import NavigationHeader from "../../../Components/NavigationHeader";
 import Description from "../Description";
+import ExampleOne from "../Example1";
+import ExampleTwo from "../Example2";
 import "./Clutter.scss";
 const data = [
   "Effective data visualizations only contain necessary information",
@@ -9,17 +11,31 @@ const data = [
   "such as lines, labels, borders, and color are overused, they can",
   "distract your audience and make the key message illegible or unclear.",
 ];
-function Clutter({ section }) {
+
+function Testing({ BreadCrumbsSection }) {
+  switch (BreadCrumbsSection) {
+    case "Description":
+      return <Description data={data} section={"Clutter"} />;
+    case "Example 1":
+      return <ExampleOne />;
+    case "Example 2":
+      return <ExampleTwo />;
+    default:
+      return <Description data={data} section={"Clutter"} />;
+  }
+}
+
+function Clutter({ BreadCrumbsSection }) {
   return (
     <div className="Form">
       <BreadCrumbsMenu />
-      <Description data={data} section={"Clutter"} />
+      <Testing BreadCrumbsSection={BreadCrumbsSection} />
     </div>
   );
 }
 const mapStateToProps = (state, ownProps) => {
   return {
-    section: state.BreadCrumbsSection,
+    BreadCrumbsSection: state.BreadCrumbsSection,
   };
 };
 export default connect(mapStateToProps, {})(Clutter);

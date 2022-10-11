@@ -1,11 +1,13 @@
 import { combineReducers } from "redux";
 import { BreadCrumbsReducer } from "./BreadCrumbsReducer";
-import { sectionReducer } from "./SectionReducer";
+import { optionReducer } from "./optionReducer";
+import { sectionReducer } from "./sectionReducer";
 
 import { StartReducer } from "./startButtonReducer";
 
 export default combineReducers({
   SimpleStates: StartReducer,
-  section: sectionReducer,
+  option: optionReducer,
   BreadCrumbsSection: BreadCrumbsReducer,
+  section: sectionReducer,
 });

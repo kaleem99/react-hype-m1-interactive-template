@@ -3,6 +3,10 @@ import "./Components.scss";
 const BreadCrumbsNavigation = ["Description", "Example 1", "Example 2"];
 function BreadCrumbsMenu({ BreadCrumbsSection }) {
   const dispatch = useDispatch();
+  const clickEvent = (val) => {
+    dispatch({ type: "ClearOptions" });
+    dispatch({ type: val });
+  };
   return (
     <div className="BreadCrumbs">
       {/* <button className="btnBC">Description</button>
@@ -14,7 +18,7 @@ function BreadCrumbsMenu({ BreadCrumbsSection }) {
         return (
           <>
             <button
-              onClick={() => dispatch({ type: val })}
+              onClick={() => clickEvent(val)}
               className="btnBC"
               style={
                 BreadCrumbsSection === val
@@ -24,7 +28,7 @@ function BreadCrumbsMenu({ BreadCrumbsSection }) {
             >
               {val}
             </button>
-            {i === 0 || i === 1 ? <p className="BC">/</p> : ""}
+            {i === 0 || i === 1 ? <p className="BC"> / </p> : ""}
           </>
         );
       })}

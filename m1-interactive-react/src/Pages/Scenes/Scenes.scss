@@ -1,6 +1,141 @@
-.sceneHeading{
-    font-size: 36px;
+.sceneHeading {
+  font-size: 36px;
 }
-.FormBody{
+.FormBody {
+  font-size: 14px;
+}
+
+// Example 1
+
+.ExampleOne {
+  width: 908px;
+  height: 440px;
+  //   background-color: gray;
+  margin: 20px auto;
+  .GraphicImage {
+    position: absolute;
+    top: 220px;
+    width: 908px;
+    height: 349px;
+  }
+  .Hotspot1Div {
+    position: relative;
+    top: 150px;
+    left: 550px;
+    width: 300px;
+    height: 50px;
+    display: grid;
+    grid-template-columns: auto 50px;
+    text-align: center;
+    .hotspotBtn {
+      border: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: rgb(229, 20, 112);
+    }
+  }
+  .Hotspot2Div {
+    position: relative;
+    top: 300px;
+    left: 50px;
+    width: 300px;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 50px auto;
+    text-align: center;
+    .hotspotBtn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: rgb(20, 117, 212);
+      border: none;
+    }
+  }
+}
+
+// DefaultOption
+
+.OptionsPopout {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 908px;
+  height: 80px;
+  // background-color: lightgray;
+  .OptionBtn {
+    width: 176px;
+    height: 48px;
+    margin: 0% auto;
+    border-radius: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
     font-size: 14px;
+  }
+  .left {
+    border: 1px solid rgb(20, 117, 212);
+  }
+  .right {
+    border: 1px solid rgb(229, 20, 112);
+  }
+  .OptionTextDiv {
+    width: 451px;
+    height: 70px;
+    background-color: #f2f2f2;
+    margin: 0% auto;
+    border-radius: 35px;
+    .OptionText {
+      text-align: center;
+      height: auto;
+      font-size: 14px;
+      line-height: 70px;
+      margin: auto;
+      width: 400px;
+    }
+  }
+
+  //   OptionOne
+  .OptionOneTextDiv {
+    width: 663px;
+    height: 70px;
+    background-color: #f2f2f2;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: auto;
+    border-radius: 35px;
+    .OptionText {
+      // text-align: center;
+      width: 400px;
+      height: auto;
+      margin-top: auto;
+      margin-bottom: auto;
+      font-size: 14px;
+    }
+    .One {
+      background-color: rgb(20, 117, 212);
+      color: white;
+    }
+  }
+  //   OptionTwo
+  .OptionTwoTextDiv {
+    width: 663px;
+    height: 70px;
+    background-color: #f2f2f2;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: auto;
+    border-radius: 35px;
+    .OptionText {
+      // text-align: center;
+      width: 400px;
+      height: auto;
+      //   margin-top: auto;
+      //   margin-bottom: auto;
+      font-size: 14px;
+      margin: auto;
+    }
+    .Two {
+      background-color: rgb(229, 20, 112);
+      color: white;
+    }
+  }
 }

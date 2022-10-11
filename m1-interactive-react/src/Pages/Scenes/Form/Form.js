@@ -2,6 +2,8 @@ import { connect } from "react-redux";
 import BreadCrumbsMenu from "../../../Components/BreadCrumbsMenu";
 import NavigationHeader from "../../../Components/NavigationHeader";
 import Description from "../Description";
+import ExampleOne from "../Example1";
+import ExampleTwo from "../Example2";
 import "./Form.scss";
 const data = [
   "There are many ways to visually represent data. Common forms of ",
@@ -17,18 +19,19 @@ const data = [
   " when choosing a form, consider whether it will be understood by the",
   " target audience.",
 ];
-function Testing({BreadCrumbsSection}) {
-  console.log(BreadCrumbsSection);
+function Testing({ BreadCrumbsSection }) {
   switch (BreadCrumbsSection) {
     case "Description":
       return <Description data={data} section={"Form"} />;
     case "Example 1":
-      return <h1>Example 1</h1>;
+      return <ExampleOne />;
+    case "Example 2":
+      return <ExampleTwo />;
     default:
       return <Description data={data} section={"Form"} />;
   }
 }
-function Form({ section, BreadCrumbsSection }) {
+function Form({ BreadCrumbsSection }) {
   return (
     <div className="Form">
       <BreadCrumbsMenu />
@@ -38,7 +41,6 @@ function Form({ section, BreadCrumbsSection }) {
 }
 const mapStateToProps = (state, ownProps) => {
   return {
-    section: state.BreadCrumbsSection,
     BreadCrumbsSection: state.BreadCrumbsSection,
   };
 };

@@ -2,6 +2,8 @@ import { connect } from "react-redux";
 import BreadCrumbsMenu from "../../../Components/BreadCrumbsMenu";
 import NavigationHeader from "../../../Components/NavigationHeader";
 import Description from "../Description";
+import ExampleOne from "../Example1";
+import ExampleTwo from "../Example2";
 import "./Message.scss";
 const data = [
   "Your data visualization should have a clear message. The data points that are",
@@ -10,17 +12,31 @@ const data = [
   "subheadings, as well as design tools such as color, size, layout, and iconography,",
   "to visually highlight key points.",
 ];
-function Message({ section }) {
+
+function Testing({ BreadCrumbsSection }) {
+  switch (BreadCrumbsSection) {
+    case "Description":
+      return <Description data={data} section={"Message"} />;
+    case "Example 1":
+      return <ExampleOne />;
+    case "Example 2":
+      return <ExampleTwo />;
+    default:
+      return <Description data={data} section={"Message"} />;
+  }
+}
+
+function Message({ BreadCrumbsSection }) {
   return (
     <div className="Form">
       <BreadCrumbsMenu />
-      <Description data={data} section={"Message"} />
+      <Testing BreadCrumbsSection={BreadCrumbsSection} />
     </div>
   );
 }
 const mapStateToProps = (state, ownProps) => {
   return {
-    section: state.BreadCrumbsSection,
+    BreadCrumbsSection: state.BreadCrumbsSection,
   };
 };
 export default connect(mapStateToProps, {})(Message);

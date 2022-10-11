@@ -1,0 +1,42 @@
+{
+  "Form": {
+    "Example 1": {
+      "Option1": "Do account for the data values, data insights, and story that you intend to communicate when selecting a form.",
+      "Option2": "Do not select a form without accounting for the data values, data insights, and story that you aim to communicate."
+    },
+    "Example 2": {
+      "Option1": "Do choose a form that is appropriate and familia to your audience.",
+      "Option2": "Do not choose a form that is overly complex or foreign to your audience."
+    }
+  },
+  "Accuracy": {
+    "Example 1": {
+      "Option1": "Do start your graph’s y-axis at zero instead of the lowest data value in the data set.",
+      "Option2": "Do not use graphic elements decoratively without consideration of the key message being communicated"
+    },
+    "Example 2": {
+      "Option1": "Do indicate growth, comparison, relationship, and distribution between different data sets using the same increments and units.",
+      "Option2": "Do indicate growth, comparison, relationship, and distribution between different data sets using the same increments and units."
+    }
+  },
+  "Message": {
+    "Example 1": {
+      "Option1": "Do use colour, size, layout, and iconography to highlight key data insights.",
+      "Option2": "Do not use colour, size, layout, and iconography decoratively."
+    },
+    "Example 2": {
+      "Option1": "Do choose a visual hierarchy to emphasize key data insights.",
+      "Option2": "Do not present all data insights equally, without using a visual hierarchy to emphasize key data insights."
+    }
+  },
+  "Clutter": {
+    "Example 1": {
+      "Option1": "Do use colour, size, layout, and iconography to highlight key data insights.",
+      "Option2": "Do not use colour, size, layout, and iconography decoratively."
+    },
+    "Example 2": {
+      "Option1": "Do simplify the message by eliminating unnecessary and repititive content.",
+      "Option2": "Do not duplicate content in order to create emphasis."
+    }
+  }
+}
