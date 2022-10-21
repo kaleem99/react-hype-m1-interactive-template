@@ -17,13 +17,29 @@
   width: 320px;
   display: grid;
   grid-template-columns: auto auto auto auto auto;
+
+  .btnBCA {
+    text-align: left;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 2px;
+    color: #3395e5;
+    background-color: white;
+    font-weight: bold;
+  }
   .btnBC {
     text-align: left;
     border: none;
     font-size: 15px;
     cursor: pointer;
     padding: 2px;
+    color: #6c6c6c;
     background-color: white;
+  }
+  .btnBC:hover,
+  .btnBCA:hover {
+    color: #082d49;
   }
   .BC {
     color: #1475d4;

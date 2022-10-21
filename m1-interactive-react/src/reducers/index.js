@@ -1,5 +1,6 @@
 import { combineReducers } from "redux";
 import { BreadCrumbsReducer } from "./BreadCrumbsReducer";
+import navigationReducer from "./navigationReducer";
 import { optionReducer } from "./optionReducer";
 import { sectionReducer } from "./sectionReducer";
 
@@ -10,4 +11,5 @@ export default combineReducers({
   option: optionReducer,
   BreadCrumbsSection: BreadCrumbsReducer,
   section: sectionReducer,
+  navigation: navigationReducer
 });

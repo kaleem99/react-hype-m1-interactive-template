@@ -6,7 +6,6 @@ export default function ExampleOne({ OptionSelected }) {
   const [state1, setState1] = useState(false);
   const [state2, setState2] = useState(false);
   const clickEvent = (event) => {
-    console.log(event === 1);
     if (event === 1 && !state1) {
       setState1(true);
     }
@@ -32,6 +31,8 @@ export default function ExampleOne({ OptionSelected }) {
   return (
     <div className="ExampleOne">
       {OptionsPopoutBody}
+      <img src={ImageGraphic}></img>
+
       <div className="GraphicImage">
         <div className="Hotspot1Div">
           {state1 ? <p className="hotspotText">Random text... 1</p>: <p></p>}
@@ -41,7 +42,6 @@ export default function ExampleOne({ OptionSelected }) {
           <button onClick={() => clickEvent(2)} className="hotspotBtn"></button>
           {state2 && <p className="hotspotText">Random text... 2</p>}
         </div>
-        <img src={ImageGraphic}></img>
       </div>
     </div>
   );

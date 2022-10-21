@@ -19,12 +19,8 @@ function BreadCrumbsMenu({ BreadCrumbsSection }) {
           <>
             <button
               onClick={() => clickEvent(val)}
-              className="btnBC"
-              style={
-                BreadCrumbsSection === val
-                  ? { color: "#1475d4", fontWeight: "bold" }
-                  : { color: "black" }
-              }
+              className={BreadCrumbsSection === val ? "btnBCA" : "btnBC"}
+
             >
               {val}
             </button>

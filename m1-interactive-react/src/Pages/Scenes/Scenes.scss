@@ -71,6 +71,14 @@
     margin-bottom: auto;
     font-size: 14px;
   }
+  .left:hover {
+    background-color: #3395e5;
+    color: white;
+  }
+  .right:hover {
+    background-color: #f45b99;
+    color: white;
+  }
   .left {
     border: 1px solid rgb(20, 117, 212);
   }
@@ -79,15 +87,15 @@
   }
   .OptionTextDiv {
     width: 451px;
-    height: 70px;
+    height: 63px;
     background-color: #f2f2f2;
-    margin: 0% auto;
+    margin: auto;
     border-radius: 35px;
     .OptionText {
       text-align: center;
       height: auto;
       font-size: 14px;
-      line-height: 70px;
+      line-height: 63px;
       margin: auto;
       width: 400px;
     }

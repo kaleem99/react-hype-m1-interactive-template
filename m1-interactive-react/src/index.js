@@ -1,17 +1,25 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
+import DestopApp from "./App";
+import MobileApp from "./MobileApp/MobileApp";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import reducers from "./reducers";
 const store = createStore(reducers);
+function CheckPlatformCompatibility() {
+  const { innerWidth, innerHeight } = window;
+  if (innerWidth < 1200) {
+    return <MobileApp />;
+  }
+  return <DestopApp />;
+}
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <CheckPlatformCompatibility />
     </Provider>
   </React.StrictMode>
 );
