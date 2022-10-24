@@ -1,5 +1,21 @@
 {
+  "DefaultText": "Select “Option 1“ or “Option 2“ to learn more.",
   "Form": {
+    "Description": [
+      "There are many ways to visually represent data. Common forms of ",
+      " data visualization are bar graphs, line graphs, scatter plots, and pie",
+      " charts. Choosing the most effective form depends on the type of data ",
+      " values you aim to present, the insights you want the audience to gain,",
+      " and the story that you aim to tell through the data.",
+      " Begin by asking yourself what you want to represent in the ",
+      " visualization. For example, do you want to show a comparison,",
+      " relationship, hierarchy, distribution, concept, pattern, or composition",
+      " between two or more sets of data? Importantly, effective data forms ",
+      " account for the audience’s biases, context, and data usage. Thus, ",
+      " when choosing a form, consider whether it will be understood by the",
+      " target audience."
+    ],
+
     "Example 1": {
       "Option1": "Do account for the data values, data insights, and story that you intend to communicate when selecting a form.",
       "Option2": "Do not select a form without accounting for the data values, data insights, and story that you aim to communicate."
@@ -10,6 +26,12 @@
     }
   },
   "Accuracy": {
+    "Description": [
+      "The purpose of data visualization is to accurately represent data in a",
+      " visual form in order to communicate key insights to a target audience.",
+      "A data visualization that distorts or misrepresents information is",
+      "ineffective and can lead to misinterpretation."
+    ],
     "Example 1": {
       "Option1": "Do start your graph’s y-axis at zero instead of the lowest data value in the data set.",
       "Option2": "Do not use graphic elements decoratively without consideration of the key message being communicated"
@@ -20,6 +42,13 @@
     }
   },
   "Message": {
+    "Description": [
+      "Your data visualization should have a clear message. The data points that are",
+      "more important than others should be emphasized to clearly indicate the key",
+      "insights of the data. Use content hierarchy, such as clear headings and",
+      "subheadings, as well as design tools such as color, size, layout, and iconography,",
+      "to visually highlight key points."
+    ],
     "Example 1": {
       "Option1": "Do use colour, size, layout, and iconography to highlight key data insights.",
       "Option2": "Do not use colour, size, layout, and iconography decoratively."
@@ -30,6 +59,12 @@
     }
   },
   "Clutter": {
+    "Description": [
+      "Effective data visualizations only contain necessary information",
+      "designed in the most legible way. When graphic elements and effects",
+      "such as lines, labels, borders, and color are overused, they can",
+      "distract your audience and make the key message illegible or unclear."
+    ],
     "Example 1": {
       "Option1": "Do use colour, size, layout, and iconography to highlight key data insights.",
       "Option2": "Do not use colour, size, layout, and iconography decoratively."

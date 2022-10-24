@@ -20,7 +20,7 @@ const data = [
   " target audience.",
 ];
 function Testing({ BreadCrumbsSection }) {
-  switch (BreadCrumbsSection) {
+  switch (BreadCrumbsSection.sectionState) {
     case "Description":
       return <Description data={data} section={"Form"} />;
     case "Example 1":

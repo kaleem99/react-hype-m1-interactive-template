@@ -82,7 +82,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     option: state.option,
     section: state.section.data,
-    BreadCrumbsSection: state.BreadCrumbsSection,
+    BreadCrumbsSection: state.BreadCrumbsSection.sectionState,
   };
 };
 export default connect(mapStateToProps, {})(DefaultOptions);

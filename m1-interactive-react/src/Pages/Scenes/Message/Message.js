@@ -14,7 +14,7 @@ const data = [
 ];
 
 function Testing({ BreadCrumbsSection }) {
-  switch (BreadCrumbsSection) {
+  switch (BreadCrumbsSection.sectionState) {
     case "Description":
       return <Description data={data} section={"Message"} />;
     case "Example 1":

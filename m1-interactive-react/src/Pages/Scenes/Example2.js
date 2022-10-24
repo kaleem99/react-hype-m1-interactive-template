@@ -14,12 +14,8 @@ export default function ExampleTwo({ OptionSelected }) {
   return (
     <div className="ExampleOne">
       {OptionsPopoutBody}
-      <div
-        className="GraphicImage"
-        style={{ position: "unset", marginTop: "18.5px" }}
-      >
-        <img src={ImageGraphic}></img>
-      </div>
+      <br></br>
+      <img src={ImageGraphic}></img>
     </div>
   );
 }
