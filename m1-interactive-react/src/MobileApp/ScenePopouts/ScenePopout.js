@@ -3,15 +3,16 @@ import { useDispatch } from "react-redux";
 import { connect } from "react-redux";
 import MobileDescription from "./MobileDescription";
 import MobileExample1 from "./MobileExample1";
-function ScenePopout({ section, BreadCrumbsSection }) {
+import MobileExample2 from "./MobileExample2";
+function ScenePopout({ section, MobileBreadCrumbsSection }) {
   const dispatch = useDispatch();
   const clickEvent = (sectionName) => {
-    if (BreadCrumbsSection.sectionState === "") {
+    if (MobileBreadCrumbsSection.sectionState === "") {
       dispatch({ type: "ClearOptions" });
-      dispatch({ type: sectionName, section: section.option });
+      dispatch({ type: sectionName + "_Mobile", section: section.option });
     } else {
-      dispatch({ type: "CLEAR_BC" });
-      dispatch({ type: sectionName });
+      dispatch({ type: "CLEAR_BC_Mobile" });
+      dispatch({ type: sectionName + "_Mobile" });
     }
   };
   switch (section.option) {
@@ -20,15 +21,13 @@ function ScenePopout({ section, BreadCrumbsSection }) {
     case "Option 3":
     case "Option 4":
       return (
-        <div className="optionsOuterDiv">
-          <div className="optionsPopout">
-            <h1 className="sectionHeaderMobile">{section.option}</h1>
-            <BreadCrumbsSectionsComp
-              section={section}
-              BreadCrumbsSection={BreadCrumbsSection}
-              clickEvent={clickEvent}
-            />
-          </div>
+        <div className="optionsPopout">
+          <h1 className="sectionHeaderMobile">{section.option}</h1>
+          <BreadCrumbsSectionsComp
+            section={section}
+            MobileBreadCrumbsSection={MobileBreadCrumbsSection}
+            clickEvent={clickEvent}
+          />
         </div>
       );
     default:
@@ -41,28 +40,43 @@ function ScenePopout({ section, BreadCrumbsSection }) {
       );
   }
 }
-function BreadCrumbsSectionsComp({ section, BreadCrumbsSection, clickEvent }) {
-  switch (BreadCrumbsSection.sectionState) {
+function BreadCrumbsSectionsComp({
+  section,
+  MobileBreadCrumbsSection,
+  clickEvent,
+}) {
+  switch (MobileBreadCrumbsSection.sectionState) {
     case "Description":
       return (
-        <MobileDescription
-          BreadCrumbsSection={BreadCrumbsSection}
-          clickEvent={clickEvent}
-        />
+        <div className="optionsOuterDiv">
+          <MobileDescription
+            MobileBreadCrumbsSection={MobileBreadCrumbsSection}
+            clickEvent={clickEvent}
+          />
+        </div>
       );
     case "Example 1":
       return (
-        <MobileExample1
-          BreadCrumbsSection={BreadCrumbsSection}
-          clickEvent={clickEvent}
-        />
+        <div className="optionsOuterDiv">
+          <MobileExample1
+            MobileBreadCrumbsSection={MobileBreadCrumbsSection}
+            clickEvent={clickEvent}
+          />
+        </div>
       );
     case "Example 2":
-      return <h1>Example 2</h1>;
+      return (
+        <div className="optionsOuterDiv">
+          <MobileExample2
+            MobileBreadCrumbsSection={MobileBreadCrumbsSection}
+            clickEvent={clickEvent}
+          />
+        </div>
+      );
     default:
       return (
         <div className="MobileBreadCrumbsNav">
-          {BreadCrumbsSection.BreadCrumbsNavigation.map((sectionName) => {
+          {MobileBreadCrumbsSection.BreadCrumbsNavigation.map((sectionName) => {
             return (
               <button
                 className="BreadCrumbsButton"
@@ -80,7 +94,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     navigation: state.navigation,
     section: state.section,
-    BreadCrumbsSection: state.BreadCrumbsSection,
+    MobileBreadCrumbsSection: state.MobileBreadCrumbsSection,
   };
 };
 export default connect(mapStateToProps, {})(ScenePopout);

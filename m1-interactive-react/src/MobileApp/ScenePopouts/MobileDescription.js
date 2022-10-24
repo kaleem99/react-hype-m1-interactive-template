@@ -1,16 +1,16 @@
 import { connect } from "react-redux";
 
-function MobileDescription({ BreadCrumbsSection, clickEvent }) {
+function MobileDescription({ MobileBreadCrumbsSection, clickEvent }) {
   return (
     <div className="MobileBreadCrumbsNav">
-      {BreadCrumbsSection.BreadCrumbsNavigation.map((sectionName, i) => {
+      {MobileBreadCrumbsSection.BreadCrumbsNavigation.map((sectionName, i) => {
         return (
           <>
             {" "}
             <button
               className="BreadCrumbsButton Description"
               style={
-                sectionName === BreadCrumbsSection.sectionState
+                sectionName === MobileBreadCrumbsSection.sectionState
                   ? { backgroundColor: "rgb(0, 122, 255)", color: "white" }
                   : { backgroundColor: "white" }
               }
@@ -20,7 +20,7 @@ function MobileDescription({ BreadCrumbsSection, clickEvent }) {
             </button>
             {i === 0 && (
               <div className="DescriptionText">
-                {BreadCrumbsSection.sectionDataInformation}
+                {MobileBreadCrumbsSection.sectionDataInformation}
               </div>
             )}
           </>

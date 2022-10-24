@@ -11,7 +11,7 @@ function MobileHomePage({ navigation, section }) {
     } else {
       dispatch({ type: "CLOSE_NAV" });
     }
-    dispatch({ type: "CLEAR_BC" });
+    dispatch({ type: "CLEAR_BC_Mobile" });
   };
   const clickEvent = (i) => {
     dispatch({ type: navigationOptions[i] });

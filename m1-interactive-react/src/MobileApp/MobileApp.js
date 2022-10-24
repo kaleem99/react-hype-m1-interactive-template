@@ -10,7 +10,7 @@ function MobileLandingPage({ BreadCrumbsSection }) {
   const dispatch = useDispatch();
   const startInteractive = () => {
     dispatch({ type: "START_INTERACTIVE" });
-    dispatch({ type: "CLEAR_BC" });
+    dispatch({ type: "CLEAR_BC_Mobile" });
   };
   return (
     <div className="MobileBody">
