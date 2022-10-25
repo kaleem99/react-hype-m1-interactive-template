@@ -1,6 +1,23 @@
-import { connect } from "react-redux";
+import { connect, useDispatch } from "react-redux";
 import GraphicImage1 from "../../images/graphicSquare.svg";
-function MobileExample1({ MobileBreadCrumbsSection, clickEvent }) {
+import AppData from "../../data/OptionsText.json";
+import { useState } from "react";
+function MobileExample1({
+  section,
+  MobileBreadCrumbsSection,
+  clickEvent,
+  option,
+}) {
+  const dispatch = useDispatch();
+  const [dataState, setDataState] = useState(
+    MobileBreadCrumbsSection.sectionDataInformation
+  );
+  const { sectionName, sectionState } = MobileBreadCrumbsSection;
+
+  const clickOptionEvent = (opt) => {
+    dispatch({ type: opt });
+    setDataState(AppData[sectionName][sectionState][opt]);
+  };
   return (
     <div className="MobileBreadCrumbsNav">
       {MobileBreadCrumbsSection.BreadCrumbsNavigation.map((sectionName, i) => {
@@ -8,7 +25,7 @@ function MobileExample1({ MobileBreadCrumbsSection, clickEvent }) {
           <>
             {" "}
             <button
-            key={i}
+              key={i}
               className="BreadCrumbsButton Description"
               style={
                 sectionName === MobileBreadCrumbsSection.sectionState
@@ -22,12 +39,42 @@ function MobileExample1({ MobileBreadCrumbsSection, clickEvent }) {
             {i === 1 && (
               <>
                 <div key={4} className="mobileButtonsDiv">
-                  <button key={5} className="buttonOpt1">Option 1</button>
-                  <button key={6} className="buttonOpt2">Option 2</button>
+                  <button
+                    key={5}
+                    onClick={() => clickOptionEvent("Option1")}
+                    className="buttonOpt1"
+                    style={
+                      option === "Option1"
+                        ? {
+                            backgroundColor: "rgb(20, 117, 212)",
+                            color: "white",
+                          }
+                        : {}
+                    }
+                  >
+                    Option 1
+                  </button>
+                  <button
+                    key={6}
+                    onClick={() => clickOptionEvent("Option2")}
+                    className="buttonOpt2"
+                    style={
+                      option === "Option2"
+                        ? {
+                            backgroundColor: "rgb(229, 20, 112)",
+                            color: "white",
+                          }
+                        : {}
+                    }
+                  >
+                    Option 2
+                  </button>
                 </div>
-                <div key={7} className="sectionSlider"></div>
+                <div key={7} className="sectionSlider">
+                  <div className={`optionSlider ${option}`}></div>
+                </div>
                 <div key={8} className="DescriptionText">
-                  {MobileBreadCrumbsSection.sectionDataInformation}
+                  {dataState}
                 </div>
                 <img key={9} src={GraphicImage1}></img>
                 <br></br>
@@ -35,8 +82,12 @@ function MobileExample1({ MobileBreadCrumbsSection, clickEvent }) {
             )}
             {i === 2 && (
               <div key={10} className="mobileButtonsDiv2">
-                <button key={11} className="buttonBack">Back</button>
-                <button key={12} className="buttonNext">Next</button>
+                <button key={11} className="buttonBack">
+                  Back
+                </button>
+                <button key={12} className="buttonNext">
+                  Next
+                </button>
               </div>
             )}
           </>
@@ -48,7 +99,9 @@ function MobileExample1({ MobileBreadCrumbsSection, clickEvent }) {
 
 const mapStateToProps = (state, ownProps) => {
   return {
+    option: state.option,
     sectionDataInformation: state.sectionDataInformation,
+    section: state.section.data,
   };
 };
 

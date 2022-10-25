@@ -27,6 +27,14 @@ function MobileDescription({ MobileBreadCrumbsSection, clickEvent }) {
           </>
         );
       })}
+      <div key={10} className="mobileButtonsDiv2">
+        <button key={11} className="buttonBack">
+          Back
+        </button>
+        <button key={12} className="buttonNext">
+          Next
+        </button>
+      </div>
     </div>
   );
 }

@@ -70,7 +70,7 @@
     }
     .MobileBreadCrumbsNav {
       display: grid;
-      width: 251px;
+      width: 260px;
       margin: auto;
       grid-template-rows: auto auto auto;
       .BreadCrumbsButton {
@@ -78,6 +78,7 @@
         text-align: left;
         padding-left: 15px;
         border-radius: 1px;
+        font-size: 14px;
         background-color: white;
         border: 1px solid rgb(77, 77, 77);
       }
@@ -119,8 +120,8 @@
           margin-right: 0px;
           margin-left: auto;
           border-radius: 30px;
-          background-color: #007AFF;
-          border: 1px solid #007AFF;
+          background-color: #007aff;
+          border: 1px solid #007aff;
           color: white;
         }
       }
@@ -147,8 +148,6 @@
         border: 1px solid rgb(232, 56, 125);
       }
       // next and back button
-
-      
     }
     .sectionSlider {
       width: 100%;
@@ -157,6 +156,21 @@
       height: 8px;
       background-color: rgb(230, 230, 230);
       border-radius: 5px;
+    }
+    .optionSlider {
+      width: 50%;
+      height: 8px;
+      background-color: rgb(4, 52, 97);
+      border-radius: 5px;
+      display: none;
+    }
+    .Option1 {
+      float: left;
+      display: inline;
+    }
+    .Option2 {
+      float: right;
+      display: inline;
     }
   }
 }

@@ -3,6 +3,7 @@ const data = {
   BreadCrumbsNavigation: ["Description", "Example 1", "Example 2"],
   sectionState: "Description",
   sectionDataInformation: "",
+  sectionName: "",
 };
 
 export const BreadCrumbsReducer = (state = data, action) => {
@@ -53,27 +54,38 @@ export const MobileBreadCrumbsReducer = (state = data, action) => {
     case "Description_Mobile":
       data.sectionState = "Description";
       data.sectionDataInformation = sectionData[objectValue].Description;
+      data.sectionName = objectValue;
+
       return {
         ...data,
         ...{
           sectionState: data.sectionState,
           sectionDataInformation: data.sectionDataInformation,
+          sectionName: data.sectionName,
         },
       };
     case "Example 1_Mobile":
       data.sectionState = "Example 1";
       data.sectionDataInformation = sectionData.DefaultText;
+      data.sectionName = objectValue;
+
       return {
         ...data,
         ...{
           sectionState: data.sectionState,
           sectionDataInformation: data.sectionDataInformation,
+          sectionName: data.sectionName,
         },
       };
 
     case "Example 2_Mobile":
       data.sectionState = "Example 2";
-      return { ...data, ...{ sectionState: data.sectionState } };
+      data.sectionName = objectValue;
+
+      return {
+        ...data,
+        ...{ sectionState: data.sectionState, sectionName: data.sectionName },
+      };
     case "CLEAR_BC_Mobile":
       data.sectionState = "";
       return { ...data, ...{ sectionState: data.sectionState } };

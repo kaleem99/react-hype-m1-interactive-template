@@ -7,17 +7,14 @@ import MobileExample2 from "./MobileExample2";
 function ScenePopout({ section, MobileBreadCrumbsSection }) {
   const dispatch = useDispatch();
   const clickEvent = (sectionName) => {
-    console.log(sectionName);
-    console.log(MobileBreadCrumbsSection.sectionState);
-    if (MobileBreadCrumbsSection.sectionState === "") {
+    if (sectionName === MobileBreadCrumbsSection.sectionState) {
+      dispatch({ type: "CLEAR_BC_Mobile" });
+      return 0;
+    }
+    // if (MobileBreadCrumbsSection.sectionState === "") {
       dispatch({ type: "ClearOptions" });
       dispatch({ type: sectionName + "_Mobile", section: section.option });
-      console.log("if")
-    } else {
-      console.log("else")
-      dispatch({ type: "CLEAR_BC_Mobile" });
-      dispatch({ type: sectionName + "_Mobile" });
-    }
+    // } 
   };
   switch (section.option) {
     case "Option 1":
