@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-hype-m1-interactive-template/static/css/main.e2f5c6a6.css",
-    "main.js": "/react-hype-m1-interactive-template/static/js/main.ae5c44e1.js",
+    "main.css": "/react-hype-m1-interactive-template/static/css/main.2451f153.css",
+    "main.js": "/react-hype-m1-interactive-template/static/js/main.7ff1f7a9.js",
     "static/js/787.6d78b5a0.chunk.js": "/react-hype-m1-interactive-template/static/js/787.6d78b5a0.chunk.js",
     "static/media/logo.svg": "/react-hype-m1-interactive-template/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/react-hype-m1-interactive-template/index.html",
@@ -10,12 +10,12 @@
     "static/media/desktopGraphicLandingImage.svg": "/react-hype-m1-interactive-template/static/media/desktopGraphicLandingImage.fcd8362d620381e4543e8bf81e3387fb.svg",
     "static/media/graphicImage2.svg": "/react-hype-m1-interactive-template/static/media/graphicImage2.c3b253f6e8515c4a52ed6dc8db20fd09.svg",
     "static/media/graphicSquare.svg": "/react-hype-m1-interactive-template/static/media/graphicSquare.6da77153e9bf7a16b260eb51f71997bc.svg",
-    "main.e2f5c6a6.css.map": "/react-hype-m1-interactive-template/static/css/main.e2f5c6a6.css.map",
-    "main.ae5c44e1.js.map": "/react-hype-m1-interactive-template/static/js/main.ae5c44e1.js.map",
+    "main.2451f153.css.map": "/react-hype-m1-interactive-template/static/css/main.2451f153.css.map",
+    "main.7ff1f7a9.js.map": "/react-hype-m1-interactive-template/static/js/main.7ff1f7a9.js.map",
     "787.6d78b5a0.chunk.js.map": "/react-hype-m1-interactive-template/static/js/787.6d78b5a0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e2f5c6a6.css",
-    "static/js/main.ae5c44e1.js"
+    "static/css/main.2451f153.css",
+    "static/js/main.7ff1f7a9.js"
   ]
 }
