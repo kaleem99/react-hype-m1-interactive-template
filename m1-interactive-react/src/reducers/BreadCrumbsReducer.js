@@ -6,20 +6,9 @@ const data = {
 };
 
 export const BreadCrumbsReducer = (state = data, action) => {
-  let objectValue = "";
-  if (action.section === "Option 1") {
-    objectValue = "Form";
-  } else if (action.section === "Option 2") {
-    objectValue = "Accuracy";
-  } else if (action.section === "Option 3") {
-    objectValue = "Message";
-  } else if (action.section === "Option 4") {
-    objectValue = "Clutter";
-  }
   switch (action.type) {
     case "Description":
       data.sectionState = action.type;
-      // data.sectionDataInformation = sectionData[objectValue].Description;
       return {
         ...data,
         ...{
@@ -29,12 +18,10 @@ export const BreadCrumbsReducer = (state = data, action) => {
       };
     case "Example 1":
       data.sectionState = action.type;
-      // data.sectionDataInformation = sectionData.DefaultText;
       return {
         ...data,
         ...{
           sectionState: data.sectionState,
-          // sectionDataInformation: data.sectionDataInformation,
         },
       };
 

@@ -46,7 +46,10 @@ function DefaultOptions({ option, section, BreadCrumbsSection }) {
 
 export function OptionOne({ text, dispatch }) {
   return (
-    <div className="OptionsPopout" style={{ gridTemplateColumns: "auto auto" }}>
+    <div
+      className="OptionsPopout"
+      style={{ gridTemplateColumns: "auto 200px" }}
+    >
       <div className="OptionOneTextDiv">
         <button className="OptionBtn left One">Option 1</button>
 
@@ -63,7 +66,10 @@ export function OptionOne({ text, dispatch }) {
 }
 export function OptionTwo({ text, dispatch }) {
   return (
-    <div className="OptionsPopout" style={{ gridTemplateColumns: "auto auto" }}>
+    <div
+      className="OptionsPopout"
+      style={{ gridTemplateColumns: "200px auto" }}
+    >
       <button
         onClick={() => dispatch({ type: "Option1" })}
         className="OptionBtn left"

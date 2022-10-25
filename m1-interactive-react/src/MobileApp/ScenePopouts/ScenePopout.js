@@ -7,10 +7,14 @@ import MobileExample2 from "./MobileExample2";
 function ScenePopout({ section, MobileBreadCrumbsSection }) {
   const dispatch = useDispatch();
   const clickEvent = (sectionName) => {
+    console.log(sectionName);
+    console.log(MobileBreadCrumbsSection.sectionState);
     if (MobileBreadCrumbsSection.sectionState === "") {
       dispatch({ type: "ClearOptions" });
       dispatch({ type: sectionName + "_Mobile", section: section.option });
+      console.log("if")
     } else {
+      console.log("else")
       dispatch({ type: "CLEAR_BC_Mobile" });
       dispatch({ type: sectionName + "_Mobile" });
     }
@@ -76,16 +80,19 @@ function BreadCrumbsSectionsComp({
     default:
       return (
         <div className="MobileBreadCrumbsNav">
-          {MobileBreadCrumbsSection.BreadCrumbsNavigation.map((sectionName) => {
-            return (
-              <button
-                className="BreadCrumbsButton"
-                onClick={() => clickEvent(sectionName)}
-              >
-                {sectionName}
-              </button>
-            );
-          })}
+          {MobileBreadCrumbsSection.BreadCrumbsNavigation.map(
+            (sectionName, i) => {
+              return (
+                <button
+                  key={i}
+                  className="BreadCrumbsButton"
+                  onClick={() => clickEvent(sectionName)}
+                >
+                  {sectionName}
+                </button>
+              );
+            }
+          )}
         </div>
       );
   }

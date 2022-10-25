@@ -8,6 +8,7 @@ function MobileDescription({ MobileBreadCrumbsSection, clickEvent }) {
           <>
             {" "}
             <button
+              key={i}
               className="BreadCrumbsButton Description"
               style={
                 sectionName === MobileBreadCrumbsSection.sectionState
@@ -19,7 +20,7 @@ function MobileDescription({ MobileBreadCrumbsSection, clickEvent }) {
               {sectionName}
             </button>
             {i === 0 && (
-              <div className="DescriptionText">
+              <div key={8} className="DescriptionText">
                 {MobileBreadCrumbsSection.sectionDataInformation}
               </div>
             )}

@@ -19,13 +19,14 @@ function MobileHomePage({ navigation, section }) {
   };
   return (
     <div className="MobileHome">
-      <button onClick={() => navDropDown()} className="NavigationMobile">
+      <button key={1} onClick={() => navDropDown()} className="NavigationMobile">
         <span className="Menu">Menu</span>
       </button>
-      <div className="NavMobilePos">
+      <div key={2} className="NavMobilePos">
         {navigation &&
           navigationOptions.map((item, i) => (
             <button
+            key={i}
               onClick={() => clickEvent(i)}
               className="NavigationMobile"
               style={
