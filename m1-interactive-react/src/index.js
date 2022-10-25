@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import DestopApp from "./App";
@@ -8,13 +8,33 @@ import { Provider } from "react-redux";
 import { createStore } from "redux";
 import reducers from "./reducers";
 const store = createStore(reducers);
+
 function CheckPlatformCompatibility() {
-  const { innerWidth, innerHeight } = window;
-  if (innerWidth < 1200) {
-    return <MobileApp />;
+  const size = useWindowSize();
+  function useWindowSize() {
+    const [windowSize, setWindowSize] = useState({
+      width: undefined,
+      height: undefined,
+    });
+    useEffect(() => {
+      function handleResize() {
+        setWindowSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      }
+      window.addEventListener("resize", handleResize);
+      handleResize();
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+    if (windowSize < 1200) {
+      return "true";
+    }
+    return windowSize;
   }
-  return <DestopApp />;
+  return <div>{size.width < 1200 ? <MobileApp /> : <DestopApp />}</div>;
 }
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
