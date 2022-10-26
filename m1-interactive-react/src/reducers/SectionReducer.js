@@ -2,6 +2,8 @@ import OptionData from "../data/OptionsText.json";
 const initialState = {
   data: "",
   option: "",
+  navigationOptions: ["Option 1", "Option 2", "Option 3", "Option 4"]
+
 };
 
 export const sectionReducer = (state = initialState, action) => {
@@ -33,6 +35,12 @@ export const sectionReducer = (state = initialState, action) => {
       return {
         ...state,
         ...{ data: initialState.data, option: initialState.option },
+      };
+    case "Clear_Sections":
+      initialState.option = "";
+      return {
+        ...state,
+        ...{ option: initialState.option },
       };
     default:
       return state;

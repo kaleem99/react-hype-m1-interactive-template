@@ -11,10 +11,28 @@ function ScenePopout({ section, MobileBreadCrumbsSection }) {
       dispatch({ type: "CLEAR_BC_Mobile" });
       return 0;
     }
-    // if (MobileBreadCrumbsSection.sectionState === "") {
+    dispatch({ type: "ClearOptions" });
+    dispatch({ type: sectionName + "_Mobile", section: section.option });
+  };
+  const clickEventBack = () => {
+    if (section.option === section.navigationOptions[0]) {
+      dispatch({ type: "Clear_Sections" });
+    } else {
+      let prevSection = section.navigationOptions.indexOf(section.option);
+      dispatch({ type: section.navigationOptions[prevSection - 1] });
       dispatch({ type: "ClearOptions" });
-      dispatch({ type: sectionName + "_Mobile", section: section.option });
-    // } 
+      dispatch({ type: "CLEAR_BC_Mobile" });
+    }
+  };
+  const clickEventNext = () => {
+    if (section.option === section.navigationOptions[3]) {
+      dispatch({ type: "Clear_Sections" });
+    } else {
+      let nextSection = section.navigationOptions.indexOf(section.option);
+      dispatch({ type: section.navigationOptions[nextSection + 1] });
+      dispatch({ type: "ClearOptions" });
+      dispatch({ type: "CLEAR_BC_Mobile" });
+    }
   };
   switch (section.option) {
     case "Option 1":
@@ -24,11 +42,28 @@ function ScenePopout({ section, MobileBreadCrumbsSection }) {
       return (
         <div className="optionsPopout">
           <h1 className="sectionHeaderMobile">{section.option}</h1>
+
           <BreadCrumbsSectionsComp
             section={section}
             MobileBreadCrumbsSection={MobileBreadCrumbsSection}
             clickEvent={clickEvent}
           />
+          <div key={10} className="mobileButtonsDiv2">
+            <button
+              key={11}
+              onClick={() => clickEventBack()}
+              className="buttonBack"
+            >
+              Back
+            </button>
+            <button
+              key={12}
+              onClick={() => clickEventNext()}
+              className="buttonNext"
+            >
+              Next
+            </button>
+          </div>
         </div>
       );
     default:

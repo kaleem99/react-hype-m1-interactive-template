@@ -65,21 +65,13 @@ function MobileExample2({ MobileBreadCrumbsSection, clickEvent, option }) {
                   </button>
                 </div>
                 <div key={7} className="sectionSlider">
-                <div className={`optionSlider ${option}`}></div>
+                  <div className={`optionSlider ${option}`}></div>
                 </div>
                 <div key={8} className="DescriptionText">
                   {dataState}
                 </div>
                 <br></br>
                 <img key={9} src={GraphicImage1}></img>
-                <div key={10} className="mobileButtonsDiv2">
-                  <button key={11} className="buttonBack">
-                    Back
-                  </button>
-                  <button key={12} className="buttonNext">
-                    Next
-                  </button>
-                </div>
               </>
             )}
           </>

@@ -2,7 +2,6 @@ import "./MobileHomePage.scss";
 import { useDispatch } from "react-redux";
 import { connect } from "react-redux";
 import ScenePopout from "./ScenePopouts/ScenePopout";
-const navigationOptions = ["Option 1", "Option 2", "Option 3", "Option 4"];
 function MobileHomePage({ navigation, section }) {
   const dispatch = useDispatch();
   const navDropDown = () => {
@@ -11,22 +10,26 @@ function MobileHomePage({ navigation, section }) {
     } else {
       dispatch({ type: "CLOSE_NAV" });
     }
-    dispatch({ type: "CLEAR_BC_Mobile" });
   };
   const clickEvent = (i) => {
-    dispatch({ type: navigationOptions[i] });
+    dispatch({ type: "CLEAR_BC_Mobile" });
+    dispatch({ type: section.navigationOptions[i] });
     dispatch({ type: "CLOSE_NAV" });
   };
   return (
     <div className="MobileHome">
-      <button key={1} onClick={() => navDropDown()} className="NavigationMobile">
+      <button
+        key={1}
+        onClick={() => navDropDown()}
+        className="NavigationMobile"
+      >
         <span className="Menu">Menu</span>
       </button>
       <div key={2} className="NavMobilePos">
         {navigation &&
-          navigationOptions.map((item, i) => (
+          section.navigationOptions.map((item, i) => (
             <button
-            key={i}
+              key={i}
               onClick={() => clickEvent(i)}
               className="NavigationMobile"
               style={

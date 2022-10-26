@@ -18,6 +18,7 @@ function MobileExample1({
     dispatch({ type: opt });
     setDataState(AppData[sectionName][sectionState][opt]);
   };
+
   return (
     <div className="MobileBreadCrumbsNav">
       {MobileBreadCrumbsSection.BreadCrumbsNavigation.map((sectionName, i) => {
@@ -80,16 +81,6 @@ function MobileExample1({
                 <br></br>
               </>
             )}
-            {i === 2 && (
-              <div key={10} className="mobileButtonsDiv2">
-                <button key={11} className="buttonBack">
-                  Back
-                </button>
-                <button key={12} className="buttonNext">
-                  Next
-                </button>
-              </div>
-            )}
           </>
         );
       })}
@@ -101,7 +92,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     option: state.option,
     sectionDataInformation: state.sectionDataInformation,
-    section: state.section.data,
+    section: state.section,
   };
 };
 
