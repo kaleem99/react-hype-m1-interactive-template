@@ -12,7 +12,7 @@ function NavigationHeader({ TabIndex }) {
       <div className="icons">
         {/* <img className="img" src={closeImage} /> */}
         <input
-          tabIndex={TabIndex}
+          // tabIndex={TabIndex}
           className="btnImg"
           type="image"
           src={closeImage}
@@ -20,7 +20,7 @@ function NavigationHeader({ TabIndex }) {
         />
         {/* <img className="img" src={refreshImage} /> */}
         <input
-          tabIndex={TabIndex}
+          // tabIndex={TabIndex}
           alt=""
           onClick={() => window.location.reload()}
           className="btnImg"
