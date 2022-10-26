@@ -2,6 +2,8 @@ import { connect, useDispatch } from "react-redux";
 import GraphicImage1 from "../../images/graphicSquare.svg";
 import AppData from "../../data/OptionsText.json";
 import { useState } from "react";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+
 function MobileExample1({
   section,
   MobileBreadCrumbsSection,
@@ -36,6 +38,12 @@ function MobileExample1({
               onClick={() => clickEvent(sectionName)}
             >
               {sectionName}
+
+              {sectionName === MobileBreadCrumbsSection.sectionState ? (
+                <IoIosArrowUp />
+              ) : (
+                <IoIosArrowDown />
+              )}
             </button>
             {i === 1 && (
               <>

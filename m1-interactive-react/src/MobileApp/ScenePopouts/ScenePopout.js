@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import MobileDescription from "./MobileDescription";
 import MobileExample1 from "./MobileExample1";
 import MobileExample2 from "./MobileExample2";
+import { IoIosArrowDown } from "react-icons/io";
+import upArrow from "./upArrow.svg";
 function ScenePopout({ section, MobileBreadCrumbsSection }) {
   const dispatch = useDispatch();
   const clickEvent = (sectionName) => {
@@ -41,7 +43,10 @@ function ScenePopout({ section, MobileBreadCrumbsSection }) {
     case "Option 4":
       return (
         <div className="optionsPopout">
-          <h1 className="sectionHeaderMobile">{section.option}</h1>
+          <h1 className="sectionHeaderMobile">
+            {section.option}
+            <IoIosArrowDown />
+          </h1>
 
           <BreadCrumbsSectionsComp
             section={section}
@@ -69,6 +74,11 @@ function ScenePopout({ section, MobileBreadCrumbsSection }) {
     default:
       return (
         <div className="optionsPopout">
+          {/* <p className="UpArrowIcon">
+            <IoIosArrowUp />
+          </p> */}
+          <img className="UpArrowSVGImage" src={upArrow}></img>
+
           <h1 className="HomeHeading">
             Click on one of the four topics to learn more
           </h1>
@@ -121,6 +131,7 @@ function BreadCrumbsSectionsComp({
                   onClick={() => clickEvent(sectionName)}
                 >
                   {sectionName}
+                  <IoIosArrowDown />
                 </button>
               );
             }

@@ -2,6 +2,8 @@ import { connect, useDispatch } from "react-redux";
 import React, { useState } from "react";
 import GraphicImage1 from "../../images/graphicSquare.svg";
 import AppData from "../../data/OptionsText.json";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+
 function MobileExample2({ MobileBreadCrumbsSection, clickEvent, option }) {
   const dispatch = useDispatch();
   const [dataState, setDataState] = useState(
@@ -29,6 +31,11 @@ function MobileExample2({ MobileBreadCrumbsSection, clickEvent, option }) {
               onClick={() => clickEvent(sectionName)}
             >
               {sectionName}
+              {sectionName === MobileBreadCrumbsSection.sectionState ? (
+                <IoIosArrowUp />
+              ) : (
+                <IoIosArrowDown />
+              )}
             </button>
             {i === 2 && (
               <>

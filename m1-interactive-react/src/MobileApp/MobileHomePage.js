@@ -2,6 +2,10 @@ import "./MobileHomePage.scss";
 import { useDispatch } from "react-redux";
 import { connect } from "react-redux";
 import ScenePopout from "./ScenePopouts/ScenePopout";
+import { IoIosArrowDown } from "react-icons/io";
+
+import { IoMenu } from "react-icons/io5";
+
 function MobileHomePage({ navigation, section }) {
   const dispatch = useDispatch();
   const navDropDown = () => {
@@ -23,7 +27,11 @@ function MobileHomePage({ navigation, section }) {
         onClick={() => navDropDown()}
         className="NavigationMobile"
       >
-        <span className="Menu">Menu</span>
+        <div className="iconsAndText">
+          <IoMenu />
+          <span className="Menu"> Menu</span>
+          <IoIosArrowDown />
+        </div>
       </button>
       <div key={2} className="NavMobilePos">
         {navigation &&
@@ -54,10 +62,4 @@ const mapStateToProps = (state, ownProps) => {
 };
 export default connect(mapStateToProps, {})(MobileHomePage);
 
-// {section.option === "" && !navigation ? (
-//   <p className="HomeHeading">
-//     Click on one of the four topics to learn more
-//   </p>
-// ) : (
-//   ""
-// )}
+

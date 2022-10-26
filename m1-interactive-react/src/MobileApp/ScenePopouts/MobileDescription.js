@@ -1,4 +1,5 @@
 import { connect } from "react-redux";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 function MobileDescription({ MobileBreadCrumbsSection, clickEvent }) {
   return (
@@ -18,6 +19,11 @@ function MobileDescription({ MobileBreadCrumbsSection, clickEvent }) {
               onClick={() => clickEvent(sectionName)}
             >
               {sectionName}
+              {sectionName === MobileBreadCrumbsSection.sectionState ? (
+                <IoIosArrowUp />
+              ) : (
+                <IoIosArrowDown />
+              )}
             </button>
             {i === 0 && (
               <div key={8} className="DescriptionText">
