@@ -16,7 +16,7 @@
 .BreadCrumbs {
   width: 320px;
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: 100px 20px 100px 20px 100px;
 
   .btnBCA {
     text-align: left;
@@ -26,7 +26,8 @@
     padding: 2px;
     color: #1375d4;
     background-color: white;
-    font-weight: bold;
+    text-shadow:0px 0px 1px #1375d4
+
   }
   .btnBC {
     text-align: left;
@@ -35,6 +36,7 @@
     cursor: pointer;
     padding: 2px;
     color: #6c6c6c;
+    font-weight: normal;
     background-color: white;
   }
   .btnBC:hover,
