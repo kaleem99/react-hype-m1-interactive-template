@@ -22,7 +22,7 @@ export default function LandingScene() {
           />
         </div>
         <div id="B" key={6}>
-          <img key={7} tabIndex={0} className="HomeImage" src={Image1} />
+          <img key={7} tabIndex={0} className="HomeImage" alt="graphic template" src={Image1} />
         </div>
       </div>
     </div>

@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 function NavigationHeader({ TabIndex }) {
   return (
     <div className="navHeader">
-      <p tabIndex={TabIndex} className="title">
+      <p className="title">
         Infographic title goes here
       </p>
       <div className="icons">
@@ -16,12 +16,12 @@ function NavigationHeader({ TabIndex }) {
           className="btnImg"
           type="image"
           src={closeImage}
-          alt=""
+          alt="exit"
         />
         {/* <img className="img" src={refreshImage} /> */}
         <input
           // tabIndex={TabIndex}
-          alt=""
+          alt="refresh"
           onClick={() => window.location.reload()}
           className="btnImg"
           type="image"
