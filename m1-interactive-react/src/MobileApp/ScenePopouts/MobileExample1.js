@@ -85,7 +85,7 @@ function MobileExample1({
                 <div key={8} className="DescriptionText">
                   {dataState}
                 </div>
-                <img key={9} src={GraphicImage1}></img>
+                <img key={9} src={GraphicImage1} alt="placeholder graphic" tabIndex={0}></img>
                 <br></br>
               </>
             )}

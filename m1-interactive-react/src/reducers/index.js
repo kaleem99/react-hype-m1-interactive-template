@@ -5,7 +5,7 @@ import {
 } from "./BreadCrumbsReducer";
 import navigationReducer from "./navigationReducer";
 import { optionReducer } from "./optionReducer";
-import { sectionReducer } from "./SectionReducer";
+import { sectionReducer } from "./sectionReducer";
 
 import { StartReducer } from "./startButtonReducer";
 

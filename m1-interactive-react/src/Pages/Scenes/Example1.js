@@ -33,7 +33,7 @@ function ExampleOne({ OptionSelected, option }) {
     <div className="ExampleOne">
       {OptionsPopoutBody}
       <br></br>
-      <img src={ImageGraphic}></img>
+      <img src={ImageGraphic} alt="placeholder graphic" tabIndex={0}></img>
 
       {!option ? (
         <div className="GraphicImage">

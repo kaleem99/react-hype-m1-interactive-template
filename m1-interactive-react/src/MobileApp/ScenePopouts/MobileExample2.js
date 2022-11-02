@@ -78,7 +78,7 @@ function MobileExample2({ MobileBreadCrumbsSection, clickEvent, option }) {
                   {dataState}
                 </div>
                 <br></br>
-                <img key={9} src={GraphicImage1}></img>
+                <img key={9} src={GraphicImage1} alt="placeholder graphic" tabIndex={0}></img>
               </>
             )}
           </>
