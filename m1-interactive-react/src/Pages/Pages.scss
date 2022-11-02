@@ -106,7 +106,7 @@
         border: 1px solid rgb(179, 179, 179);
         font-size: large;
       }
-      .NavButton:hover {
+      .NavButton:hover, .NavButton:focus {
         background-color: #3395e5;
         color: white;
       }
