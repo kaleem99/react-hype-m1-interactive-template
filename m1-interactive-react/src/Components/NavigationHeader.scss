@@ -8,6 +8,9 @@
     background-color: $navy;
     display: grid;
     grid-template-columns: auto auto;
+    .t{
+      color: red !important;
+    }
     .title {
       color: $grayTitle;
       font-size: 16px;

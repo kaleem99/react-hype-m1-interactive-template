@@ -1,4 +1,5 @@
 import { useDispatch } from "react-redux";
+import { useRef } from "react";
 import "./Pages.scss";
 import Image1 from "../images/desktopGraphicLandingImage.svg";
 import Button from "../Components/button";
@@ -9,7 +10,7 @@ export default function LandingScene() {
       <div className="LandingScenes" key={1}>
         <div id="A" key={2}>
           <h1 tabIndex={0} className="Heading1" key={3}>
-            This is the length<br></br> of a heading
+            This is the length of a heading
           </h1>
           <h2 tabIndex={0} className="Heading2" key={4}>
             Short-ish subheading
@@ -22,7 +23,13 @@ export default function LandingScene() {
           />
         </div>
         <div id="B" key={6}>
-          <img key={7} tabIndex={0} className="HomeImage" alt="graphic template" src={Image1} />
+          <img
+            key={7}
+            tabIndex={0}
+            className="HomeImage"
+            alt="graphic template"
+            src={Image1}
+          />
         </div>
       </div>
     </div>

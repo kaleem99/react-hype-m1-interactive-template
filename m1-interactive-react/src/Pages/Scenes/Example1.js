@@ -3,6 +3,8 @@ import ImageGraphic from "../../images/graphicImage2.svg";
 import DefaultOptions from "./DefaultOptions";
 import { useState } from "react";
 import { connect } from "react-redux";
+import { Tooltip } from "@mui/material";
+
 function ExampleOne({ OptionSelected, option }) {
   const [state1, setState1] = useState(false);
   const [state2, setState2] = useState(false);
@@ -38,21 +40,39 @@ function ExampleOne({ OptionSelected, option }) {
       {!option ? (
         <div className="GraphicImage">
           <div className="Hotspot1Div">
-            {state1 ? <p className="hotspotText">Random text... 1</p> : <p></p>}
-            <button
-              onClick={() => clickEvent(1)}
-              className="hotspotBtn"
-            ></button>
+            {state1 ? (
+              <p tabIndex={0} className="hotspotText">
+                Random text... 1
+              </p>
+            ) : (
+              <p></p>
+            )}
+            <Tooltip title="Hotspot 1" placement="top">
+              <button
+                aria-label="hotspot 1"
+                onClick={() => clickEvent(1)}
+                className="hotspotBtn"
+              ></button>
+            </Tooltip>
           </div>
           <div className="Hotspot2Div">
-            <button
-              onClick={() => clickEvent(2)}
-              className="hotspotBtn"
-            ></button>
-            {state2 && <p className="hotspotText">Random text... 2</p>}
+            <Tooltip title="Hotspot 2" placement="top">
+              <button
+                aria-label="hotspot 2"
+                onClick={() => clickEvent(2)}
+                className="hotspotBtn"
+              ></button>
+            </Tooltip>
+            {state2 && (
+              <p tabIndex={0} className="hotspotText">
+                Random text... 2
+              </p>
+            )}
           </div>
         </div>
-      ) : ""}
+      ) : (
+        ""
+      )}
     </div>
   );
 }

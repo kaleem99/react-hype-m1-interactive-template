@@ -1,9 +1,15 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { connect, useDispatch } from "react-redux";
 import "./Scenes.scss";
 
 function DefaultOptions({ option, section, BreadCrumbsSection }) {
+  const [state, setState] = useState(-1);
   const dispatch = useDispatch();
+  const inputReference = useRef(null);
+  const changeFocus = () => {
+    setState(0);
+    inputReference.current.fucus();
+  };
   switch (option) {
     case "Option1":
       return (
@@ -23,17 +29,24 @@ function DefaultOptions({ option, section, BreadCrumbsSection }) {
       return (
         <div className="OptionsPopout">
           <button
+            ref={inputReference}
+            tabIndex={state}
             onClick={() => dispatch({ type: "Option1" })}
             className="OptionBtn left"
           >
             Option 1
           </button>
           <div className="OptionTextDiv">
-            <p className="OptionText">
+            <p
+              className="OptionText"
+              tabIndex={0}
+              onBlur={() => changeFocus()}
+            >
               Select "Option" 1 or "Option 2" to learn more
             </p>
           </div>
           <button
+            tabIndex={2}
             onClick={() => dispatch({ type: "Option2" })}
             className="OptionBtn right"
           >
