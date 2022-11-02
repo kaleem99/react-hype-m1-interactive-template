@@ -15,7 +15,7 @@ export default function ExampleTwo({ OptionSelected }) {
     <div className="ExampleOne">
       {OptionsPopoutBody}
       <br></br>
-      <img src={ImageGraphic}></img>
+      <img src={ImageGraphic} alt="placeholder graphic" tabIndex={0}s></img>
     </div>
   );
 }
