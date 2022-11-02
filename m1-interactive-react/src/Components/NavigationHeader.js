@@ -11,7 +11,7 @@ function NavigationHeader({ TabIndex }) {
   const [refresh, setRefresh] = useState(refreshImage);
   return (
     <div className="navHeader">
-      <p tabIndex={TabIndex} className="title">
+      <p className="title">
         Infographic title goes here
       </p>
       <div className="icons">
@@ -30,7 +30,7 @@ function NavigationHeader({ TabIndex }) {
         {/* <img className="img" src={refreshImage} /> */}
         <input
           // tabIndex={TabIndex}
-          alt=""
+          alt="refresh"
           onClick={() => window.location.reload()}
           onFocus={() => setRefresh(refreshHoverImage)}
           onBlur={() => setRefresh(refreshImage)}
