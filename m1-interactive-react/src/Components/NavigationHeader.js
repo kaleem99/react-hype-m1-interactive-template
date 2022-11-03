@@ -22,7 +22,7 @@ function NavigationHeader({ TabIndex }) {
         Infographic title goes here
       </p>
       <div className="icons">
-        <Tooltip title="exit button" placement="top">
+        <Tooltip title="exit" placement="top">
           <input
             className="btnImg"
             type="image"
@@ -33,7 +33,7 @@ function NavigationHeader({ TabIndex }) {
             alt="exit"
           />
         </Tooltip>
-        <Tooltip title="refresh button" placement="top">
+        <Tooltip title="refresh" placement="top">
           <input
             // tabIndex={TabIndex}
             alt="refresh"

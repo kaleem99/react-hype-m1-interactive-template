@@ -15,12 +15,6 @@ export default function LandingScene() {
           <h2 tabIndex={0} className="Heading2" key={4}>
             Short-ish subheading
           </h2>
-          <Button
-            key={5}
-            classNameText="btn1"
-            text="Start"
-            event={() => dispatch({ type: "START_INTERACTIVE" })}
-          />
         </div>
         <div id="B" key={6}>
           <img
@@ -29,6 +23,16 @@ export default function LandingScene() {
             className="HomeImage"
             alt="graphic template"
             src={Image1}
+          />
+        </div>
+        <div id="C">
+          {" "}
+          <Button
+            key={5}
+            classNameText="btn1"
+            text="Start"
+            tabIndex={1}
+            event={() => dispatch({ type: "START_INTERACTIVE" })}
           />
         </div>
       </div>

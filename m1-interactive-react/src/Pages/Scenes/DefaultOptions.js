@@ -4,11 +4,20 @@ import "./Scenes.scss";
 
 function DefaultOptions({ option, section, BreadCrumbsSection }) {
   const [state, setState] = useState(-1);
+  const [checked, setChecked] = useState(false);
   const dispatch = useDispatch();
   const inputReference = useRef(null);
   const changeFocus = () => {
-    setState(0);
-    inputReference.current.fucus();
+    if (!checked) {
+      setState(0);
+      document.querySelector(".left").focus();
+    }
+  };
+  const setFocus = () => {
+    if (!checked) {
+      setChecked(true);
+      document.querySelector(".right").focus();
+    }
   };
   switch (option) {
     case "Option1":
@@ -33,20 +42,17 @@ function DefaultOptions({ option, section, BreadCrumbsSection }) {
             tabIndex={state}
             onClick={() => dispatch({ type: "Option1" })}
             className="OptionBtn left"
+            onBlur={() => setFocus()}
           >
             Option 1
           </button>
           <div className="OptionTextDiv">
-            <p
-              className="OptionText"
-              tabIndex={0}
-              onBlur={() => changeFocus()}
-            >
+            <p className="OptionText" tabIndex={0} onBlur={() => changeFocus()}>
               Select "Option" 1 or "Option 2" to learn more
             </p>
           </div>
           <button
-            tabIndex={2}
+            tabIndex={0}
             onClick={() => dispatch({ type: "Option2" })}
             className="OptionBtn right"
           >

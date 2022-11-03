@@ -4,6 +4,18 @@
     height: 620px;
     margin: 0% auto;
     .LandingScenes {
+      #A {
+        grid-area: A;
+        height: 100px;
+      }
+      #B {
+        grid-area: B;
+      }
+      #C {
+        grid-area: C;
+        padding: 30px;
+
+      }
       width: 1020px;
       height: 488px;
       margin-top: 80px;
@@ -11,7 +23,9 @@
       margin-left: auto;
       margin-right: auto;
       display: grid;
-      grid-template-columns: 510px 510px;
+      grid-template-areas:
+        "A B"
+        "C B";
       div {
         width: 100%;
         height: auto;
@@ -28,7 +42,6 @@
           font-size: 48px;
           width: auto;
           margin-block-end: 0px;
-
         }
         .Heading2 {
           font-size: 36px;
@@ -107,7 +120,8 @@
         border: 1px solid rgb(179, 179, 179);
         font-size: large;
       }
-      .NavButton:hover, .NavButton:focus {
+      .NavButton:hover,
+      .NavButton:focus {
         background-color: #3395e5;
         color: white;
       }
