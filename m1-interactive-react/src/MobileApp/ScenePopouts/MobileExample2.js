@@ -74,7 +74,7 @@ function MobileExample2({ MobileBreadCrumbsSection, clickEvent, option }) {
                 <div key={7} className="sectionSlider">
                   <div className={`optionSlider ${option}`}></div>
                 </div>
-                <div key={8} className="DescriptionText">
+                <div key={8} className="DescriptionText" tabIndex={0}>
                   {dataState}
                 </div>
                 <br></br>
