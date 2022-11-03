@@ -42,17 +42,19 @@ function ExampleOne({ OptionSelected, option }) {
             <button
               onClick={() => clickEvent(1)}
               className="hotspotBtn"
-            >Hotspot 1</button>
+            ></button>
           </div>
           <div className="Hotspot2Div">
             <button
               onClick={() => clickEvent(2)}
               className="hotspotBtn"
-            >Hotspot 2</button>
+            ></button>
             {state2 && <p className="hotspotText">Random text... 2</p>}
           </div>
         </div>
-      ) : ""}
+      ) : (
+        ""
+      )}
     </div>
   );
 }
