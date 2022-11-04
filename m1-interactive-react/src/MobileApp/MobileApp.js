@@ -15,8 +15,8 @@ function MobileLandingPage({ BreadCrumbsSection }) {
   return (
     <div className="MobileBody">
       <img alt="placeholder graphic" className="squareImage" src={mobileImage} tabIndex="0" ></img>
-      <h1 className="Header1">This is the length of the heading</h1>
-      <h2 className="Header2">Short-ish subheading</h2>
+      <h1 className="Header1" tabIndex={0}>This is the length of the heading</h1>
+      <h2 className="Header2" tabIndex={0}>Short-ish subheading</h2>
       <Button
         key={5}
         classNameText="StartButton"

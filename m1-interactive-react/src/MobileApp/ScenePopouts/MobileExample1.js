@@ -82,7 +82,7 @@ function MobileExample1({
                 <div key={7} className="sectionSlider">
                   <div className={`optionSlider ${option}`}></div>
                 </div>
-                <div key={8} className="DescriptionText">
+                <div key={8} className="DescriptionText" tabIndex={0}>
                   {dataState}
                 </div>
                 <img key={9} src={GraphicImage1} alt="placeholder graphic" tabIndex={0}></img>

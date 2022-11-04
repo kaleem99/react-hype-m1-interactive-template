@@ -26,7 +26,7 @@ function MobileDescription({ MobileBreadCrumbsSection, clickEvent }) {
               )}
             </button>
             {i === 0 && (
-              <div key={8} className="DescriptionText">
+              <div key={8} className="DescriptionText" tabIndex={0}>
                 {MobileBreadCrumbsSection.sectionDataInformation}
               </div>
             )}
