@@ -26,11 +26,12 @@ function NavigationHeader({ TabIndex }) {
           <input
             className="btnImg"
             type="image"
+            onFocus={() => setClose(closeHoverImage)}
             onBlur={() => setClose(closeImage)}
             onMouseOut={() => setClose(closeImage)}
             onMouseOver={() => setClose(closeHoverImage)}
             src={close}
-            alt="exit"
+          alt="exit"    
           />
         </Tooltip>
         <Tooltip title="refresh" placement="top">
