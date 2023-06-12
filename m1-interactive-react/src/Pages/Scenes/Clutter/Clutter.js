@@ -4,7 +4,7 @@ import NavigationHeader from "../../../Components/NavigationHeader";
 import Description from "../Description";
 import ExampleOne from "../Example1";
 import ExampleTwo from "../Example2";
-import "./Clutter.scss";
+// import "./Clutter.scss";
 const data = [
   "Effective data visualizations only contain necessary information",
   "designed in the most legible way. When graphic elements and effects",

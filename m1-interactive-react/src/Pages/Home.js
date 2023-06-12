@@ -1,7 +1,7 @@
 import { connect, useDispatch } from "react-redux";
 import Button from "../Components/button";
 import ScenePopout from "../Components/ScenePopout";
-import "./Pages.scss";
+import "./Home.module.scss";
 
 const Navigation = ["Option 1", "Option 2", "Option 3", "Option 4"];
 function Home({ popup, section, TabIndex }) {

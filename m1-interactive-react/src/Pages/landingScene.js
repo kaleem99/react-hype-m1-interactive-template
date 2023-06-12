@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { useRef } from "react";
-import "./Pages.scss";
+// import "./Pages.scss";
 import Image1 from "../images/desktopGraphicLandingImage.svg";
 import Button from "../Components/button";
 export default function LandingScene() {

@@ -1,4 +1,4 @@
-import "./Scenes.scss";
+import "./Scenes.module.scss";
 import { useRef } from "react";
 export default function Description({ section, data }) {
   const inputReference = useRef(null);

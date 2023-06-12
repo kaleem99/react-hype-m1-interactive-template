@@ -1,4 +1,4 @@
-import "./NavigationHeader.scss";
+import "./NavigationHeader.module.scss";
 import closeImage from "../images/exit.svg";
 import refreshImage from "../images/refresh.svg";
 import closeHoverImage from "../images/exitHover.svg";

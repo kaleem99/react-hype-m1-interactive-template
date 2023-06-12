@@ -1,4 +1,4 @@
-import "./Scenes.scss";
+import "./Scenes.module.scss";
 import ImageGraphic from "../../images/graphicImage2.svg";
 import DefaultOptions from "./DefaultOptions";
 export default function ExampleTwo({ OptionSelected }) {

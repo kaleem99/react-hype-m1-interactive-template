@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { connect, useDispatch } from "react-redux";
-import "./Scenes.scss";
+// import "./Scenes.scss";
 
 function DefaultOptions({ option, section, BreadCrumbsSection }) {
   const [state, setState] = useState(-1);

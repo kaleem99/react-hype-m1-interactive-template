@@ -4,7 +4,7 @@ import NavigationHeader from "../../../Components/NavigationHeader";
 import Description from "../Description";
 import ExampleOne from "../Example1";
 import ExampleTwo from "../Example2";
-import "./Form.scss";
+import "./Form.module.scss";
 const data = [
   "There are many ways to visually represent data. Common forms of ",
   " data visualization are bar graphs, line graphs, scatter plots, and pie",

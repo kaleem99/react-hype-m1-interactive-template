@@ -1,0 +1,171 @@
+.sceneHeading {
+  font-size: 36px;
+}
+.FormBody {
+  font-size: 14px;
+  width: 50%;
+}
+
+// Example 1
+
+.ExampleOne {
+  width: 908px;
+  height: 440px;
+  //   background-color: gray;
+  margin: 20px auto;
+  .GraphicImage {
+    position: absolute;
+    // background-color: red;
+    top: 302px;
+    width: 908px;
+    height: 349px;
+  }
+  .Hotspot1Div {
+    // position: relative;
+    margin-top: 50px;
+    margin-right: 100px;
+    margin-left: auto;
+    width: 300px;
+    height: 68px;
+    display: grid;
+    grid-template-columns: auto 68px;
+    text-align: center;
+    .hotspotText {
+      width: 200px;
+      height: 50px;
+      border-radius: 10px;
+      background-color: #f2f2f2;
+      line-height: 50px;
+    }
+    .hotspotBtn {
+      border: none;
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background-color: rgb(229, 20, 112);
+    }
+    .hotspotBtn:hover,.hotspotBtn:focus {
+      background-color: #f45b99;
+    }
+  }
+  .Hotspot2Div {
+    margin-top: 152px;
+    margin-left: 100px;
+    width: 300px;
+    height: 68px;
+    display: grid;
+    grid-template-columns: 68px auto;
+    text-align: center;
+    .hotspotText {
+      margin-left: 50px;
+      width: 200px;
+      height: 50px;
+      border-radius: 10px;
+      background-color: #f2f2f2;
+      line-height: 50px;
+    }
+    .hotspotBtn {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background-color: rgb(20, 117, 212);
+      border: none;
+    }
+    .hotspotBtn:hover, .hotspotBtn:focus {
+      background-color: #3395e5;
+    }
+  }
+}
+
+// DefaultOption
+
+.OptionsPopout {
+  display: grid;
+  grid-template-columns: 200px auto 200px;
+  width: 860px;
+  height: 80px;
+  margin: 0% auto;
+  // background-color: lightgray;
+  .OptionBtn {
+    width: 176px;
+    height: 48px;
+    margin: 0% auto;
+    border-radius: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 14px;
+    background-color: white;
+  }
+  .left:hover, .left:focus {
+    background-color: #3395e5;
+    color: white;
+  }
+  .right:hover, .right:focus {
+    background-color: #f45b99;
+    color: white;
+  }
+  .left {
+    border: 1px solid rgb(20, 117, 212);
+  }
+  .right {
+    border: 1px solid rgb(229, 20, 112);
+  }
+  .OptionTextDiv {
+    width: 451px;
+    height: 63px;
+    background-color: #f2f2f2;
+    margin: auto;
+    border-radius: 35px;
+    .OptionText {
+      text-align: center;
+      height: auto;
+      font-size: 14px;
+      line-height: 63px;
+      margin: auto;
+      width: 400px;
+    }
+  }
+
+  //   OptionOne
+  .OptionOneTextDiv {
+    width: 100%;
+    height: 70px;
+    background-color: #f2f2f2;
+    display: grid;
+    grid-template-columns: 200px auto;
+    margin: auto;
+    border-radius: 35px;
+    .OptionText {
+      // text-align: center;
+      width: 400px;
+      height: auto;
+      margin: auto;
+      font-size: 14px;
+    }
+    .One {
+      background-color: rgb(20, 117, 212);
+      color: white;
+    }
+  }
+  //   OptionTwo
+  .OptionTwoTextDiv {
+    width: 100%;
+    height: 70px;
+    background-color: #f2f2f2;
+    display: grid;
+    grid-template-columns: auto 200px;
+    margin: auto;
+    border-radius: 35px;
+    .OptionText {
+      // text-align: center;
+      width: 400px;
+      height: auto;
+      font-size: 14px;
+      margin: auto;
+    }
+    .Two {
+      background-color: rgb(229, 20, 112);
+      color: white;
+    }
+  }
+}

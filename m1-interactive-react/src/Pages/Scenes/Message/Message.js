@@ -4,7 +4,7 @@ import NavigationHeader from "../../../Components/NavigationHeader";
 import Description from "../Description";
 import ExampleOne from "../Example1";
 import ExampleTwo from "../Example2";
-import "./Message.scss";
+// import "./Message.scss";
 const data = [
   "Your data visualization should have a clear message. The data points that are",
   "more important than others should be emphasized to clearly indicate the key",

@@ -1,5 +1,5 @@
 import { connect, useDispatch } from "react-redux";
-import "./Components.scss";
+// import "./Components.scss";
 function BreadCrumbsMenu({ BreadCrumbsSection, BreadCrumbsNavigation }) {
   const dispatch = useDispatch();
   const clickEvent = (val) => {

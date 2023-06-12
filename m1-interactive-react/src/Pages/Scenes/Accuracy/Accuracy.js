@@ -4,7 +4,7 @@ import NavigationHeader from "../../../Components/NavigationHeader";
 import Description from "../Description";
 import ExampleOne from "../Example1";
 import ExampleTwo from "../Example2";
-import "./Accuracy.scss";
+// import "./Accuracy.scss";
 const data = [
   "The purpose of data visualization is to accurately represent data in a",
   " visual form in order to communicate key insights to a target audience.",
